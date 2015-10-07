@@ -15,7 +15,7 @@ On the whole, I learnt more in this conference than I did 3-4 years ago. You can
 
 From <i>"The Testopsy: Dissect Your Testing"</i> by James Bach and Jon Bach,
 
-`Testing is never to get from Point A to Point B but to discover what was previously unknown and to notice them when they do through experimentation and exploration including questioning, modeling, observation, inference etc`
+`Testing is never to get from Point A to Point B but to discover what was previously unknown and to notice them when they do through experimentation and exploration including questioning, modeling, observation, inference etc.`
 
 They suggested an approach to examine if your testing is effective with a <b>Testopsy</b>. This is a creative twist of an autopsy (as you can expect from James & Jon Bach), where a testopsy is an autopsy of a testing session. Here's how it goes,
   
@@ -33,7 +33,7 @@ More on Testopsy from the <a href="http://starwest.techwell.com/sessions/starwes
 
 <h4>Deeper dive into the definition of testing</h4>
 
-From Michael Bolton and James Bach sesssion on "The Secret Life of Testers: Where Your Time Really Goes", testing terminology is lumped into many activities that is not testing. Hence, this session shows how testing can be "de-lumped" so that we can be cognizant of the time that is taken away from actual testing for better test effort estimation.
+From Michael Bolton and James Bach session on "The Secret Life of Testers: Where Your Time Really Goes", testing terminology is lumped into many activities that is not testing. Hence, this session shows how testing can be "de-lumped" so that we can be cognizant of the time that is taken away from actual testing for better test effort estimation.
 
 Examples of time taken away from actual testing - bugs, test setup, attempt to perform testing such as discussing test plans, code changes, and attending related chalk talks and fixing test scripts.
 
