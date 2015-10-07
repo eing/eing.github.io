@@ -33,7 +33,7 @@ More on Testopsy from the <a href="http://starwest.techwell.com/sessions/starwes
 
 <h4>Deeper dive into the definition of testing</h4>
 
-From Michael Bolton and James Bach sesssion on "The Secret Life of Testers: Where Your Time Really Goes", testing terminology is lumped into many activities that is not testing. Hence, this session shows how testing can be "de-lumped" so that we can be cognizant of the time is taken away from actual testing for better test effort estimation.
+From Michael Bolton and James Bach sesssion on "The Secret Life of Testers: Where Your Time Really Goes", testing terminology is lumped into many activities that is not testing. Hence, this session shows how testing can be "de-lumped" so that we can be cognizant of the time that is taken away from actual testing for better test effort estimation.
 
 Examples of time taken away from actual testing - bugs, test setup, attempt to perform testing such as discussing test plans, code changes, and attending related chalk talks and fixing test scripts.
 
@@ -71,14 +71,14 @@ Co-incidentally, two of my co-workers are presenting at <a href="https://www.por
 Noticed that I left out the word "Test" in front of Automation and that I prepared you in the previous heading. Here are some notable quotes from both sessions above and the keynotes.
 
 From Bj Rollison's keynote,
-`Automation is valuable when you have large amounts of data and data variability, stress, performance, concurrency`
+`Automation is valuable when you have large amounts of data and data variability, stress, performance, concurrency.`
 
-`Automation is a beast and needs to be controlled before it gets out of hand (by dividing into appropriate test suites)`
+`Automation is a beast and needs to be controlled before it gets out of hand (by dividing into appropriate test suites).`
 
 From Michael Bolton/James Bach session,
-`Machines executes checks but human tests`
+`Machines executes checks but human tests.`
 
-From Bart Knaack's keynote, he strikes of 'Test' in 'Test Automation' and replaces it with 'Check',
+From Bart Knaack's keynote, he strikes out 'Test' in 'Test Automation' and replaces it with 'Check',
 `Test Automation ==> Check Automation`
 
 These clearly dismiss the notions of the automation magic wand that will replace all testing efforts or that testing is dead because there's automation.
