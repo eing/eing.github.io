@@ -84,7 +84,7 @@ From Bart Knaack's keynote, he strikes of 'Test' in 'Test Automation' and replac
 These clearly dismiss the notions of the automation magic wand that will replace all testing efforts or that testing is dead because there's automation.
 
 <h2>REST Services (check) Automation</h2>
-I have to put a plug in for this since I presented this topic. The open source tool I talked about is <a href="https://github.com/jayway/rest-assured">REST-assured</a>. I'll have more on this topic once I migrated all my blogs from eingong.blogspot.com.
+I have to put a plug in for this since I presented <a href="http://starwest.techwell.com/sessions/starwest-2015/automate-rest-services-testing-restassured"> "Automate REST Services Testing with RestAssured"</a>. The open source tool I talked about was <a href="https://github.com/jayway/rest-assured">REST-assured</a>. I'll have more on this topic once I migrated all my blogs from eingong.blogspot.com.
 
 <ul>
 <li>Slides are available at <a href="http://www.slideshare.net/eingong/2015starwest-presentation-on-restassured">SlideShare</a></li>
