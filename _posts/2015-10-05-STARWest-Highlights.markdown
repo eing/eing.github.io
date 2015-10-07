@@ -9,7 +9,7 @@ cover:  "assets/starwest.png"
 ---
 <h1> Highlights from <a href="http://starwest.techwell.com" >STARWEST</a> 2015</h1>
 
-On the whole, I learnt more this conference than it did 3-4 years ago. You can easily tell when I tweet more and blog more. Here are some of the more prominent messages I gathered from the conference.
+On the whole, I learnt more in this conference than I did 3-4 years ago. You can easily tell when I tweet more and blog more. Here are some of the more prominent messages I gathered from the conference.
 
 <h2> Definition of testing (that is different from automation)</h2>
 
