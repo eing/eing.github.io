@@ -52,7 +52,12 @@ Janet Gregory's "I Don’t Want to Talk about Bugs: Let’s Change the Conversat
 
 `Counting defects tells us how bad our product quality is, but it doesn't tell us how good it is.`
 
-`Bring visibility  to how testing add value to our business by reducing risks and misunderstandings e.g. can something be right (meet product specs) but not meet customers' needs.`
+`Bring visibility to how testing add value to our business by reducing risks and misunderstandings.`
+
+`Are you looking ahead for risks or are you following behind looking for bugs?`
+
+`As testers to add value to our business, we should ask: can something be right (meet product specs) but not meet customers' needs. (From @walkeTim: Does the 'inspected by' slip in a pair of trousers mean the trousers fit or look good on you?)`
+
 
 Janet listed a few ways one can access product value and if our testing has added value -
 <ul>
