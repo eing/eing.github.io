@@ -1,0 +1,13 @@
+---
+layout: post
+title: Automating mobile applications - an experimental technique
+date: '2010-09-30T22:20:00.000-07:00'
+author: Eing Ong
+categories: Testing
+tags: moet python mobile iphone android blackberry
+modified_time: '2010-12-09T11:30:36.656-08:00'
+blogger_id: tag:blogger.com,1999:blog-8918612625404720119.post-4014947066196169511
+blogger_orig_url: http://eingong.blogspot.com/2010/09/automating-mobile-applications.html
+---
+
+I made this presentation at BlackBerry DevCon 2010 just a few days ago. Capturing some of the key points here.<br /><div><br /></div><div>This technique creates uses Python to automate native mobile applications using simulator libraries (also written in Python). How this works -</div><div><br /></div><div><ul><li>Build a simulator library such as bblib.py, androidlib.py, iphonelib.py. The former two will soon be available in the open source community (likely github)</li></ul><blockquote>This library should contain the means for you to communicate with the simulator as well as useful commands such as capturing screenshots, installing your app.</blockquote><ul><li>Create your application interface class that is applicable across your mobile platforms.</li></ul><blockquote>E.g. AddressBook application would have addContact, findContact, updateContact interface methods.</blockquote><ul><li>Implement the interface class using the simulator library.&nbsp;</li></ul><blockquote>def addContact(self, contact):&nbsp;</blockquote><blockquote>&nbsp;&nbsp; &nbsp;# Touch screen at 100, 50 to create new contact&nbsp;</blockquote><blockquote>&nbsp;&nbsp; &nbsp;touch(100, 50)</blockquote><blockquote>&nbsp;&nbsp; &nbsp;enter(contact.getFirstname())</blockquote><blockquote>&nbsp;&nbsp; &nbsp;thumbwheel('down', 1)</blockquote><blockquote>&nbsp;&nbsp; &nbsp;enter(contact.getLastname())</blockquote><blockquote>&nbsp;&nbsp; &nbsp;# To save&nbsp;</blockquote><blockquote>&nbsp;&nbsp; menu()</blockquote><blockquote>&nbsp;&nbsp; touch(50, 300)</blockquote><ul><li>Write your tests with these interface methods. This way your tests can be run on different devices of the same platform and even on different mobile platforms.</li></ul><blockquote>class AddContactTest(unittest.TestCase):</blockquote><blockquote>&nbsp;&nbsp; &nbsp;# Magic line to get the device to execute</blockquote><blockquote>&nbsp;&nbsp; &nbsp;device = testenv.getDevice()</blockquote><blockquote>&nbsp;&nbsp; &nbsp;def addContactWithOnlyFirstname(self):</blockquote><blockquote>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;self.contact.setFirstname(firstname)</blockquote><blockquote>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;self.device.add(self.contact)</blockquote><ul><li>Run your tests in Hudson.&nbsp;</li></ul></div>

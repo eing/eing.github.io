@@ -4,7 +4,7 @@ title:  "STARWEST 2015"
 date:   2015-10-06 07:43:59
 author: Eing Ong
 categories: Conferences
-tags: conferences starwest
+tags: restassured wiremock
 cover:  "assets/starwest.png"
 ---
 <h1> Highlights from <a href="http://starwest.techwell.com" >STARWEST</a> 2015</h1>

@@ -44,8 +44,8 @@ disqus_shortname: eing
 
 # Category descriptions (for archive pages)
 descriptions:
-  - cat: Software Engineering
-    desc: "Posts on coding."
+  - cat: Technology
+    desc: "Posts on technology."
 
   - cat: Testing
     desc: "Posts on software testing."
