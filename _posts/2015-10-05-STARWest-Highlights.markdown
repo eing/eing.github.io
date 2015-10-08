@@ -73,7 +73,7 @@ There are a few talks on service virtualizations (e.g. IBM, Parasoft). Service v
 Co-incidentally, two of my co-workers are presenting at <a href="https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=1727">AWS re:Invent</a> on this using an open source tool, <a href="http://wiremock.org">WireMock</a>.
 
 <h2>Automation</h2>
-Noticed that I left out the word "Test" in front of Automation and that I prepared you in the previous heading. Here are some notable quotes from both sessions above and the keynotes.
+Noticed that I left out the word "Test" in front of Automation and that I prepared you in the first heading. Here are some notable quotes from sessions listed above as well as the keynotes.
 
 From Bj Rollison's keynote,
 `Automation is valuable when you have large amounts of data and data variability, stress, performance, concurrency.`
