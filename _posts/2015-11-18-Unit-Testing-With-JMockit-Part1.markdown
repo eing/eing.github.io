@@ -19,7 +19,7 @@ I'll be blogging the following important concepts in an order easier to learn an
 public class LoginServiceTest {
     @Mocked UserAccount account;
 ~~~~
-Now, anyEmail instance is annotated with Mocked. What does this really mean, i.e. what parts of anyEmail instance are mocked?
+@Mocked is the most commonly used annotation in JMockit. In the example above, anyEmail instance is annotated with Mocked. What does this really mean, i.e. what parts of anyEmail instance are mocked?
 <ul>
 <li>All SimpleEmail methods (whether it is private/final/abstract/protected/static and constructors) and all its <b>non-static</b> initializers and <b>non-static</b> fields assignment (e.g. constructors)</li>
 <li>All of SimpleEmail super classes (if any) up to but not including java.lang.Object will be mocked recursively.</li>
