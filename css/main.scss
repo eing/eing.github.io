@@ -11,3 +11,15 @@
   "neat/neat",
   "layout"
 ;
+
+table {
+  table-layout: auto;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 3px;
+}
+
+table td, table th{
+  padding: 3px 3px;
+  border-collapse: separate;
+}
