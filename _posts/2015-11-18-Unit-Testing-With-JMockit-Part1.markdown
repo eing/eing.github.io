@@ -19,12 +19,12 @@ I'll be blogging the following important concepts in an order easier to learn an
 public class LoginServiceTest {
     @Mocked UserAccount account;
 ~~~~
-@Mocked is the most commonly used annotation in JMockit. In the example above, anyEmail instance is annotated with Mocked. What does this really mean, i.e. what parts of anyEmail instance are mocked?
+@Mocked is the most commonly used annotation in JMockit. In the example above, UserAcount instance, "account" is annotated with Mocked. What does this really mean, i.e. what parts of UserAccount instance are mocked?
 <ul>
-<li>All SimpleEmail methods (whether it is private/final/abstract/protected/static and constructors) and all its <b>non-static</b> initializers and <b>non-static</b> fields assignment (e.g. constructors)</li>
-<li>All of SimpleEmail super classes (if any) up to but not including java.lang.Object will be mocked recursively.</li>
+<li>All UserAccount methods (whether it is private/final/abstract/protected/static and constructors) and all its <b>non-static</b> initializers and <b>non-static</b> fields assignment (e.g. constructors)</li>
+<li>All of UserAccount super classes (if any) up to but not including java.lang.Object will be mocked recursively.</li>
 </ul>
-Hint: To mock [static initializers](http://www.developer.com/java/other/article.php/2238491/The-Essence-of-OOP-using-Java-Static-Initializer-Blocks.htm), you have to use @Mocked(stubOutClassInitialization=true). By default, it is false.
+Tip: To mock [static initializers](http://www.developer.com/java/other/article.php/2238491/The-Essence-of-OOP-using-Java-Static-Initializer-Blocks.htm), you have to use @Mocked(stubOutClassInitialization=true). By default, it is false.
 
 <h2>Expectations</h2>
 When we are unit testing a class, we want it to run reliably, and repeatedly fast. Typically, our class under test will depend on other classes/packages/jars that might be unreliable, expensive to setup/run, or are slow to response. Hence, we need a means to specify the behavior of these external APIs and JMockit provides Expectations to do just that.
