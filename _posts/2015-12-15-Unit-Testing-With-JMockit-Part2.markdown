@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "In the deep trenches with JMockit Part 2"
-date:   2015-12-18 17:43:59
+date:   2015-12-15 18:43:59
 author: Eing Ong
 categories: Testing
 tags: jmockit
