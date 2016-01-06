@@ -3,7 +3,6 @@ layout: page
 title: "Posts"
 permalink: /posts/
 ---
-
 {% for category in site.categories %}
 	{% capture cat %}{{ category | first }}{% endcapture %}
 	<h2>{{ cat | capitalize }}</h2>
@@ -25,4 +24,3 @@ permalink: /posts/
 	{% if forloop.last == false %}<hr>{% endif %}
 {% endfor %}
 <br>
-
