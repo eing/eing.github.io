@@ -21,15 +21,6 @@ url: "http://eing.github.io" # the base hostname & protocol for your site
 cover: "assets/header_image.jpg"
 logo: "assets/logo.png"
 
-# Build settings
-markdown: redcarpet
-redcarpet: 
-  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
-#markdown: kramdown
-#kramdown:
-#  input: GFM
-paginate: 5
-paginate_path: "/page:num/"
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 jekyll-archives: 
@@ -116,3 +107,13 @@ protocols:
 #    os_repo: "https://github.com/RichardLitt/wordhoardpress.com"
 #    os_rcs_type: "git"
 #    os_src: "git@github.com:RichardLitt/wordhoardpress.com.git"
+
+# Build settings
+markdown: redcarpet
+redcarpet: 
+  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+#markdown: kramdown
+#kramdown:
+#  input: GFM
+paginate: 5
+paginate_path: "/page:num/"
