@@ -26,7 +26,7 @@ jekyll-archives:
   enabled: all
 #    - categories
 #    - tags
-  layout: 'archive'
+  layout: archive
   permalinks:
     category: '/category/:name/'
     tag: '/tag/:name/'
