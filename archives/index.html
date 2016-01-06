@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="wrapper">
+
+<h1 class="page-title" style="display:inline-block;"> {{ page.title }} </h1>
+
+
+{% for category in site.categories %}
+        {% capture cat %}{{ category | first }}{% endcapture %}
+        <h2>{{ cat | capitalize }}</h2>
+        {% for desc in site.descriptions %}
+                {% if desc.cat == cat %}
+                        <p class="desc"><em>{{ desc.desc }}</em></p>
+                {% endif %}
+        {% endfor %}
+        <ul class="posts-list">
+        {% for post in site.categories[cat] %}
+                <li>
+                        <strong>
+                                <a href="{{ post.url | remove_first: '/' | prepend: site.baseurl }}">{{ post.title }}</a>
+                        </strong>
+                        <span class="post-date">- {{ post.date | date_to_long_string }}</span>
+                </li>
+        {% endfor %}
+        </ul>
+        {% if forloop.last == false %}<hr>{% endif %}
+{% endfor %}
+<br>
+
+
+<!--
+<div style="display:inline-block;margin-left:.5em;">
+    Browse by <a href="/archives/category/">Category</a> or <a href="/archives/tag/">Tag</a>
+</div>
+
+<h4>
+Browse by 
+<ul>
+<li><a href="/archives/category">Category</a></li>
+<li><a href="/archives/tag">Tag</a></li>
+</h4>
+-->
+
+</div>

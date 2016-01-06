@@ -1,6 +1,5 @@
 # External gems
 gems:
-  - jekyll-archives
   - jekyll-sitemap
 
 exclude:
@@ -25,7 +24,6 @@ logo: "assets/logo.png"
 markdown: redcarpet
 redcarpet: 
   extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
-highlighter: pygments
 #markdown: kramdown
 #kramdown:
 #  input: GFM
@@ -39,14 +37,14 @@ permalink:           pretty
 relative_permalinks: true
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
-jekyll-archives: 
-  enabled:
-    - categories
-    - tags
-  layout: archive
-  permalinks:
-    category: '/category/:name/'
-    tag: '/tag/:name/'
+#jekyll-archives: 
+#  enabled:
+#    - categories
+#    - tags
+#  layout: archive
+#  permalinks:
+#    category: '/category/:name/'
+#    tag: '/tag/:name/'
 
 # Disqus comments
 disqus_shortname: eing
@@ -123,4 +121,3 @@ protocols:
 #    os_repo: "https://github.com/RichardLitt/wordhoardpress.com"
 #    os_rcs_type: "git"
 #    os_src: "git@github.com:RichardLitt/wordhoardpress.com.git"
-
