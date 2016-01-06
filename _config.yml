@@ -1,6 +1,6 @@
 # External gems
 gems:
-  - jekyll-archives # Sorry, not GitHub pages friendly!
+  - jekyll-archives
   - jekyll-sitemap
 
 exclude:
@@ -21,11 +21,28 @@ url: "http://eing.github.io" # the base hostname & protocol for your site
 cover: "assets/header_image.jpg"
 logo: "assets/logo.png"
 
+# Build settings
+markdown: redcarpet
+redcarpet: 
+  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+highlighter: pygments
+#markdown: kramdown
+#kramdown:
+#  input: GFM
+paginate: 5
+paginate_path: "/page:num/"
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 jekyll-archives: 
-  enabled: all
-#    - categories
-#    - tags
+  enabled:
+    - categories
+    - tags
   layout: archive
   permalinks:
     category: '/category/:name/'
@@ -107,12 +124,3 @@ protocols:
 #    os_rcs_type: "git"
 #    os_src: "git@github.com:RichardLitt/wordhoardpress.com.git"
 
-# Build settings
-markdown: redcarpet
-redcarpet: 
-  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
-#markdown: kramdown
-#kramdown:
-#  input: GFM
-paginate: 5
-paginate_path: "/page:num/"
