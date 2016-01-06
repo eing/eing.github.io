@@ -21,12 +21,11 @@ url: "http://eing.github.io" # the base hostname & protocol for your site
 cover: "assets/header_image.jpg"
 logo: "assets/logo.png"
 
-
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 jekyll-archives: 
-  enabled: 
-    - categories
-    - tags
+  enabled: all
+#    - categories
+#    - tags
   layout: 'archive'
   permalinks:
     category: '/category/:name/'
