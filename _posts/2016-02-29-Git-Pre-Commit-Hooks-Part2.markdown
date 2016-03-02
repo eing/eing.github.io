@@ -32,7 +32,7 @@ If you're using gradle, take a look at [FindBugs Extension](https://docs.gradle.
                     <!-- Ensures that FindBugs inspects source code when project is compiled. -->
                     <execution>
                         <id>analyze-compile</id>
-                        <phase>compile</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>
@@ -65,7 +65,7 @@ Again, for gradle, you can refer to [Checkstyle Extension](https://docs.gradle.o
                     <execution>
                         <id>checkstyle</id>
                         <goals><goal>check</goal></goals>
-                        <phase>compile</phase>
+                        <phase>verify</phase>
                     </execution>
                 </executions>
                 <dependencies>
