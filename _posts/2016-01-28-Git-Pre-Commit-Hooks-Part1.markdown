@@ -3,7 +3,7 @@ layout: post
 title:  "Git pre-commit hooks Part 1"
 date:   2016-01-28 07:43:59
 author: Eing Ong
-categories: technology
+categories: Technology
 tags: git maven java jmockit
 ---
 Git pre-commit hook is simply a script that is placed in every git project under {project_root}/.git/hooks/pre-commit. By default, .git/hooks directory is generated for every git project, containing all sample hooks. To activate it, you just have to remove the extension ".sample". Here's picture of my local .git/hooks directory,

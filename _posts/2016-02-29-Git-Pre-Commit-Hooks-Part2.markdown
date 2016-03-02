@@ -3,7 +3,7 @@ layout: post
 title:  "Git pre-commit hooks Part 2"
 date:   2016-02-29 07:43:59
 author: Eing Ong
-categories: technology
+categories: Technology
 tags: git maven java jmockit
 ---
 In Part 1, I use "mvn test" results to determine if pre-commit should pass. This leverages many maven plugins that are handy and easy to customize for your requirements. There are 3 checks I added - FindBugs, Checkstyle and JMockit coverage threshold. Let's get started with FindBugs first.
