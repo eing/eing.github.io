@@ -15,7 +15,7 @@ Now you notice, a file with a symlink "pre-commit@", it's a file linking to "../
 Next section is what my pre-commit.sh looks like and how I created a script that every developer executes to set up this pre-commit hook on their local development machine.
 
 <h2>Creating a simple git pre-commit hook</h2>
-Here's my pre-commit.sh that can also be placed in .git/hooks/pre-commit to be a pre-commit hook. Instead of "mvn clean install test", you can substitude it with any checks you want to run and if you use gradle, place "gradle test" instead.
+Here's my pre-commit.sh that can also be placed in .git/hooks/pre-commit to be a pre-commit hook. Instead of "mvn clean install test", you can substitute it with any checks you want to run and if you use gradle, place "gradle test" instead.
 
 ~~~
 git stash -q --keep-index
@@ -39,7 +39,7 @@ fi
 exit 0
 ~~~
 <h2>Creating an installation script</h2>
-To create an executeable script that developers can run to create a symlink to pre-commit.sh, and also to create the pre-commit.sh, here's an install_precommit.sh script.
+To create an executable script that developers can run to create a symlink to pre-commit.sh, and also to create the pre-commit.sh, here's an install_precommit.sh script.
 
 ~~~
 { echo "
@@ -78,4 +78,4 @@ $ ./install_precommit.sh
 
 Now you have completed adding a git pre-commit client hook.
 
-In my next blog, I'll show the use maven plugins for checkstyle, findbugs & surefire plugins to enforce your pre-commit checks.
+In my next blog, I'll show the use maven plugins for Checkstyle, FindBugs & Surefire plugins to enforce your pre-commit checks.
