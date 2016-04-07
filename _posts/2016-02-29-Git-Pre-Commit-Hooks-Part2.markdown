@@ -118,7 +118,7 @@ JMockit has a good write up on code coverage, see [JMockit Code Coverage Tutoria
 Other examples for coverage-check (instead of "85" in the example above) are 
 <ul>
 <li>"perFile:85,80,90", meaning that each source file must have at least 85% of line coverage, at least 70% branch coverage and at least 90% of data coverage </li>
-<li>"package:85,80,90", has similar thresholds as above except that it is applied to source files in a given package, including sub-packages.
+<li>"package:85,80,90", has similar thresholds as above except that it is applied to source files in a given package, including sub-packages.</li>
 </ul>
 
 Finally, these are the dependencies I use along with the plugins.
@@ -142,3 +142,8 @@ Finally, these are the dependencies I use along with the plugins.
         </dependency>
     <dependencies>
 ~~~
+
+<h2>Good sources of information</h2>
+Yelp has a website dedicated just for pre-commit, [pre-commit.com](http://pre-commit.com). This goes to show how serious they are about good coding practices. 
+
+For more indepth learnings on the concepts as well as other git hooks, they are well explained by [GitHooks](http://githooks.com) and [Atlassian](https://www.atlassian.com/git/tutorials/git-hooks/conceptual-overview).
