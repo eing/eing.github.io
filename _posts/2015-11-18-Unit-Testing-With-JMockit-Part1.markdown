@@ -51,7 +51,7 @@ When we are unit testing a class, we want it to run reliably, repeatedly and fas
 | Expectations examples | Return result(s) | What matches |
 | --------------------- | ---------------- | ------------ |
 | <b>Constructor</b><br>new UserAccount(anyInt);<br>minTimes = 1; maxTimes = 2; | void | new UserAccount(1); <br> new UserAccount(2); |
-| <b>Method call</b><br>account.passwordMatches(anyString);<p>result = new Exception(); times = 1; | Exception instance | @Mock or @Injectable account |
+| <b>Method call</b><br>account.passwordMatches(anyString);<br>result = new Exception(); times = 1; | Exception instance | @Mock or @Injectable account |
 | <b>Mocked instance</b><br>onInstance(account).passwordMatches(anyString);<br> returns(false, true); | 1st call = false.<br>2nd call = true. | @Mock or @Injectable account|
 
 
