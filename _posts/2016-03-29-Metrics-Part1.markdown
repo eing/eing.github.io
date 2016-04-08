@@ -8,9 +8,9 @@ tags: Sonar Perforce TechDebt
 ---
 I'll talk about just two metrics in this two part blog. I had to obtain different metrics for a Quality 6 Pager I'm working on, a narrative on our current state of quality, and our target state in the organization. This concept came from [Amazon](https://www.linkedin.com/pulse/beauty-amazons-6-pager-brad-porter) and you can easily find more information on it.
 
-The first is technical debt of a monolith. Many of the Sonar reports we have are based on individual component and it makes sense as such reports take time to generate. However, a Sonar report on the entire monolith has not been done and I had to go through some hoops to get the data.
+The first is technical debt of a large code base (aka monolith). Many of the Sonar reports we have are based on individual component and it makes sense as such reports take time to generate. However, a Sonar report on the entire monolith has not been done and I had to go through some hoops to get the data.
 
-<h2>Finding technical debt for monoliths</h2>
+<h2>Finding technical debt for a large code base</h2>
 
 To install and run Sonar on your local is straightforward. Download from [SonarQube](http://www.sonarqube.org/downloads/), and run the command and then go to http://localhost:9000.
 
@@ -58,4 +58,11 @@ After some research, I added this into sonar-project.properties, and managed to 
 export SONAR_RUNNER_OPTS="-Xmx1G -Xms1024m -XX:MaxPermSize=1024m -XX:-UseGCOverheadLimit"
 ~~~
 
+<h2>More on Sonar?</h2>
+Some good resources to read more on 
+1. [Sonar Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner)
+2. [Sonar filters](http://docs.sonarqube.org/display/SONAR/Narrowing+the+Focus)
+3. [Sonar technical debt calculation](http://www.sonarqube.org/evaluate-your-technical-debt-with-sonar/)
+
+<h2>Next</h2>
 In the second part of this metrics blog, I'll be looking for data to better understand engineers behavior.

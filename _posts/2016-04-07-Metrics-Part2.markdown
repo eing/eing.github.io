@@ -14,6 +14,12 @@ I wanted to find out how much code is dormant, i.e. has not be modified for past
 ~~~text
 cd ${project_workspace}
 
+# Be sure you have these configured
+# P4HOSTNAME=
+# P4CLIENT=
+# P4USER=
+# P4PORT=
+
 # find last modified time of all java files
 find . -name "*.java" -exec p4 fstat -T headModTime {} >> headModTime \; 
 
@@ -79,4 +85,4 @@ Last but not least, this week I had the opportunity to meet with Marty, Drew & B
 [Selecting metrics for your Agile teams](http://akfpartners.com/techblog/2015/01/19/selecting-metrics-agile-teams/)
 [Engineering metrics](http://akfpartners.com/techblog/2012/11/01/engineering-metrics/)
 
-Finally, I'll leave you with the good ol' quotes <i>"You can't improve what you don't measure"</i>, use the right metrics to drive change and behavior to achieve the outcome.
+Finally, I'll leave you with the good ol' quote <i>"You can't improve what you don't measure"</i>, use the right metrics to drive change and behavior to achieve the outcome.
