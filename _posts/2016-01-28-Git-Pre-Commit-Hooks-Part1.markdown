@@ -17,7 +17,7 @@ Next section is what my pre-commit.sh looks like and how I created a script that
 <h2>Creating a simple git pre-commit hook</h2>
 Here's my pre-commit.sh that can also be placed in .git/hooks/pre-commit to be a pre-commit hook. Instead of "mvn clean install test", you can substitute it with any checks you want to run and if you use gradle, place "gradle test" instead.
 
-~~~
+~~~text
 git stash -q --keep-index
 # Using "mvn test" to run all unit tests and run plugins to assert
 #   * code coverage threshold >= 85% (using surefire, enforcer plugins)
@@ -41,7 +41,7 @@ exit 0
 <h2>Creating an installation script</h2>
 To create an executable script that developers can run to create a symlink to pre-commit.sh, and also to create the pre-commit.sh, here's an install_precommit.sh script.
 
-~~~
+~~~text
 { echo "
 git stash -q --keep-index
 # Using "mvn test" to run all unit tests and run plugins to assert
@@ -70,7 +70,7 @@ popd
 ~~~
 To execute this install_precommit.sh script,
 
-~~~
+~~~text
 $ cd {project root}
 $ chmod +x install_precommit.sh
 $ ./install_precommit.sh

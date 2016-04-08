@@ -17,7 +17,7 @@ You can refer to [Petri K's blog](http://www.petrikainulainen.net/programming/ma
 
 If you're using gradle, take a look at [FindBugs Extension](https://docs.gradle.org/current/dsl/org.gradle.api.plugins.quality.FindBugsExtension.html)
 
-~~~
+~~~text
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
@@ -48,7 +48,7 @@ To customize your own rules set (if Sun rules set is too restrictive), refer to 
 
 Again, for gradle, you can refer to [Checkstyle Extension](https://docs.gradle.org/current/dsl/org.gradle.api.plugins.quality.CheckstyleExtension.html)
 
-~~~
+~~~text
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -84,7 +84,7 @@ Last but not least is code coverage threshold for unit tests. Since we are using
 
 JMockit has a good write up on code coverage, see [JMockit Code Coverage Tutorial](http://jmockit.org/tutorial/CodeCoverage.html). The only part that should be included is the surefire plugin and how you can set the coverage-check configuration. So, here're snippets extracted from my pom.
 
-~~~
+~~~text
           <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.version}</version>
@@ -123,7 +123,7 @@ Other examples for coverage-check (instead of "85" in the example above) are
 
 Finally, these are the dependencies I use along with the plugins.
 
-~~~
+~~~text
     <properties>
         <jmockit.version>1.21</jmockit.version>
         <surefire.version>2.19.1</surefire.version>
