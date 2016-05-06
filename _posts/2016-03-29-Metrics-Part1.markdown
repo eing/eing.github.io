@@ -4,7 +4,7 @@ title:  "Metrics to drive change in behavior - Part 1"
 date:   2016-03-29 07:43:59
 author: Eing Ong
 categories: Metrics
-tags: Sonar Perforce TechDebt
+tags: Sonar
 ---
 I'll talk about just two metrics in this two part blog. I had to obtain different metrics for a Quality 6 Pager I'm working on, a narrative on our current state of quality, and our target state in the organization. This concept came from [Amazon](https://www.linkedin.com/pulse/beauty-amazons-6-pager-brad-porter) and you can easily find more information on it.
 

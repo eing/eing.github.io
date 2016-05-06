@@ -6,10 +6,10 @@ author: Eing Ong
 categories: Metrics
 tags: Perforce
 ---
-Another good use of metrics is to understand behavior in order to identify what we need to correct. If engineers are taking a longer time to understand, fix and add new code to a code base, it could be that the code has low code coverage, poor documentation and many other [code smells](http://www.industriallogic.com/wp-content/uploads/2005/09/smellstorefactorings.pdf). One other issue is much of the code is dormant and there is no owner for a long time. Learning such code without unit tests, documentation or any engineer who is familiar with the code can be an issue. 
+Another good use of metrics is to understand behavior in order to identify what we need to correct. If engineers are taking a longer time to understand, fix and add new code to a code base, it could be that the code has low code coverage, poor documentation and many other [code smells](http://www.industriallogic.com/wp-content/uploads/2005/09/smellstorefactorings.pdf). One other issue is much of the code is orphaned and there is no owner for a long time. Learning such code without unit tests, documentation or any engineer who is familiar with the code can be an issue. 
 
-<h2>How dormant is your code base</h2>
-I wanted to find out how much code is dormant, i.e. has not be modified for past 2, 3, 4 and 5 years. This code base is in P4 and I could use "p4 fstat -T headModTime {filename}" command to find the last modified time. Here's the script.
+<h2>How orphaned is your code base</h2>
+I wanted to find out how much code is orphaned, i.e. has not be modified for past 2, 3, 4 and 5 years. This code base is in P4 and I could use "p4 fstat -T headModTime {filename}" command to find the last modified time. Here's the script.
 
 ~~~text
 cd ${project_workspace}
