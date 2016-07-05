@@ -21,9 +21,6 @@ cover: "assets/header_image.jpg"
 logo: "assets/logo.png"
 
 # Build settings
-#markdown: redcarpet
-#redcarpet: 
-#  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 markdown: kramdown
 kramdown:
   input: GFM
