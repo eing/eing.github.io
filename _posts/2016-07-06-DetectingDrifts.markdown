@@ -9,9 +9,9 @@ tags: tools
 This blog describes how you can create an extension to [Hystrix Network Auditor Agent](https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-network-auditor-agent) that may help you to be more productive in detecting dependencies not wrapped in Hystrix and prevent any drifts into failure over time. 
 
 <h3>Why build an extension?</h3>
-As teams started to adopt the Hystrix network auditor agent, I noticed the vast amount of time scrum teams take to incorporate it in. The friction in productivity came from
+As teams started to adopt the Hystrix network auditor agent, I noticed the vast amount of time scrum teams take to incorporate it. The barriers or friction in productivity came from
 
-* Figuring out where to add the event listener (especially for a legacy code base) 
+* Figuring out where to add the event listener (especially for legacy code base) 
 * Dependencies stack trace are lumped together with application logs i.e. parsing is needed
 * Duplicate stack traces containing the same dependencies are logged i.e. 'sort \| uniq' commands are needed
 * Stack trace is far too verbose as you don't really need the entire stack trace
@@ -19,7 +19,7 @@ As teams started to adopt the Hystrix network auditor agent, I noticed the vast 
 Hence, the goal of the agent extension should fulfill the following objectives -
 
 1. No application source code change required
-2. Automatic self registration
+2. Automatic self registration of listener
 3. Duplicate dependencies are removed
 4. Provides logging into a separate file
 5. Dependencies can be configured (e.g. class name and lines count)
@@ -65,7 +65,7 @@ public class DriftEventListener implements HystrixNetworkAuditorEventListener {
     }
 ```
 
-<h3>Create list of useful properties to configure listener during runtime</h3>
+<h3>Create list of useful properties to configure listener in command-line</h3>
 Drift detector has to be used widely across different organizations, so it should be flexible enough to support all scrum teams without any code modification. By using Java system properties (by specifying with -D in JVM command line), each scrum team can customize these optional parameters according to their needs.
 
 ```
@@ -112,7 +112,7 @@ Here's how the listener initialized the logger using JoranConfigurator -
         JoranConfigurator jc = new JoranConfigurator();
         jc.setContext(context);
         context.reset();
-        // override default configuration and inject logfile name
+        // Override default configuration and inject logfile name
         context.putProperty(Constant.PROPERTY_LOGFILE_NAME, logFilename);
         context.putProperty(Constant.PROPERTY_LOG_DIR_PATH, logDir);
         try (InputStream resourceStream =
@@ -129,7 +129,7 @@ Here's how the listener initialized the logger using JoranConfigurator -
 
 
 <h3>Create unit tests</h3>
-Writing unit tests was a tad challenging as I'm extending from a class with private and static methods. I used JMockit to achieve over 80% code coverage and has so far not a single defect in the source code. Here's one JMockit test method -
+Writing unit tests was a tad challenging as I'm extending from a class with private and static methods. I used JMockit to achieve over 80% code coverage and has so far not a single defect. Here's one JMockit test method -
 
 ```
     @Test
@@ -185,4 +185,4 @@ To build the Java Agent, you'll need to use gradle or maven to package all the d
 <h3>Run it!</h3>
 You should be able to run the agent by appending "-javaagent:${path}/driftdetector.jar" to JVM command-line. You'll have to exercise the application code (by running tests) so that dependencies will be captured.
 
-Hope this helps!
+Please leave any feedback and comments. Hope this helps!
