@@ -3,7 +3,7 @@ layout: post
 title:  "Testing for Resiliency"
 date:   2016-06-10 19:43:59
 author: Eing Ong
-categories: testing
+categories: Testing
 tags: tools
 ---
 <h2>Understanding Resiliency</h2>

@@ -3,7 +3,7 @@ layout: post
 title:  "Detecting Drifts"
 date:   2016-07-06 22:43:59
 author: Eing Ong
-categories: testing
+categories: Testing
 tags: tools
 ---
 This blog describes how you can create an extension to [Hystrix Network Auditor Agent](https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-network-auditor-agent) that may help you to be more productive in detecting dependencies not wrapped in Hystrix and prevent any drifts into failure over time. 
