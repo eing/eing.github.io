@@ -16,18 +16,18 @@ First, let's take a look at a few definitions for resiliency.
 
 A great book to read on resiliency is [Release It!](https://www.amazon.com/Release-Production-Ready-Software-Pragmatic-Programmers/dp/0978739213) by Michael T. Nygard where he wrote - 
 
-: > "A resilient system keeps processing transactions, even when there are transient impulses, persistent stresses, or component failures disrupting normal processing. This is what most people mean when they just say stability. It’s not just that your individual servers or applications stay up and running but rather that the user can still get work done."
+: > A resilient system keeps processing transactions, even when there are transient impulses, persistent stresses, or component failures disrupting normal processing. This is what most people mean when they just say stability. It’s not just that your individual servers or applications stay up and running but rather that the user can still get work done.
 
-Understanding resiliency is the first step, what's next? Here are a few questions that would come to mind -
+Understanding resiliency is the first step, what comes next? Here are a few follow up questions -
 
- * How do I find out what are the services that threaten my service stability?
- * How do I simulate my service responses to instability? 
- * How can I ensure that my service stability does not regress/drift over time?
+ * How do I find out the services that threaten my service stability?
+ * How do I simulate instability of the services that I depend on?
+ * How can I ensure that the stability of my service does not regress/drift over time?
 
 There are many tools that tackle each question (note. there is not one tool that does all three well). In the next section, I'll list the tools that you might be interested to look into.
 
 <h3>Discovery of dependencies</h3>
-Finding out what your dependencies are should be the first and foremost step for resiliency testing. Here is the list of popular tools -
+Finding out dependencies should be the first and foremost step for resiliency testing. Here is the list of popular tools -
 
  * [Charles](http://www.charlesproxy.com)
  * [Fiddler](http://www.telerik.com/fiddler)
