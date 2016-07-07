@@ -9,7 +9,7 @@ tags: tools
 <h2>Understanding Resiliency</h2>
 Many tests stop at unit and business use cases workflow with both positive and negative scenarios. In the world of microservices where a webservice depends on many other microservices to accomplish a complex task, building a resilient service is an implicit customer expectation that we need to build in, just like any feature.
 
-First, let's take a look at a few definitions of resilience.
+First, let's take a look at a few definitions for resiliency.
 
 [Resilience](https://en.wikipedia.org/wiki/Resilience_(network)) (from wikipedia)
  : > Resilience is the ability to provide and maintain an acceptable level of service in the face of faults and challenges to normal operation. 
@@ -35,7 +35,7 @@ Finding out what your dependencies are should be the first and foremost step for
  * [Andiparos/Zap Proxy](https://code.google.com/p/andiparos/, https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
  * [Hystrix Network Auditor Agent](https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-network-auditor-agent)
 
-Hystrix Network Auditor Agent was the tool we went with as our application is built with Hystrix fault tolerance library. I will describe in my next blog an extension I wrote to the audtior agent so that you do not have to modify application code and other productivity improvements.
+Hystrix Network Auditor Agent was the tool we went with as our application is built with Hystrix fault tolerance library. I will describe in my next blog an extension I wrote to the audtior agent so that you do not have to modify application code as well as other productivity improvements.
 
 <h3>Simulating instability conditions</h3>
 
