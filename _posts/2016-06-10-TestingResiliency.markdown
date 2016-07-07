@@ -18,7 +18,7 @@ A great book to read on resiliency is [Release It!](https://www.amazon.com/Relea
 
 : > A resilient system keeps processing transactions, even when there are transient impulses, persistent stresses, or component failures disrupting normal processing. This is what most people mean when they just say stability. It’s not just that your individual servers or applications stay up and running but rather that the user can still get work done.
 
-Understanding resiliency is the first step, what comes next? Here are a few follow up questions -
+Understanding resiliency is the first step, what comes next? Here are some questions that I would ask -
 
  * How do I find out the services that threaten my service stability?
  * How do I simulate instability of the services that I depend on?
@@ -105,3 +105,14 @@ There are a few other categories worth noting and they may apply to your testing
    - [MoSKito](http://www.moskito.org)
    - [Java Simon](https://code.google.com/p/javasimon/)
    - [Servo](https://github.com/Netflix/servo)
+
+<h3>Conclusion</h3>
+Once you have a good understanding of what you need to test for resiliency, I hope that by shortlisting these tools by category and criteria will help you narrow down and pick the right tool for your resiliency testing toolbox. Having a set of principles when evaluating tools is also highly recommended. For example, our principles are 
+
+* Prioritize mature OST(Open Source Tools) over COTS (Commercial Off-The-Shelf) and COTS over homegrown DIY
+* Test development using these tools should be simple, easy and the resulting code readable
+* Tools should be easily extended, customized, and/or a thin abstraction layer added to serve application specific needs
+* Tools must be a cost effective solution considering purchase, training, development and maintenance costs
+* Tools should be scalable to enable and increase engineers productivity in all scrum teams
+
+I welcome any questions, insights or suggestions you have. Please feel free to email me or leave comments on this blog. Thank you for reading!
