@@ -6,7 +6,7 @@ author: Eing Ong
 categories: Testing
 tags: jmockit
 ---
-This is a continuation from Part 1 on JMockit concepts. In this section, we'll cover Verifications, @Tested & @Injectable.
+This is a continuation from [Part 1](/testing/2015/11/18/Unit-Testing-With-JMockit-Part1/) on JMockit concepts. In this section, we'll cover Verifications, @Tested & @Injectable.
 
 <h2>Verifications</h2>
 
@@ -166,4 +166,10 @@ Here are the differences in the tests -
     }
 ~~~
 
-This concludes JMockit Part 2. In the final part, we'll look at MockUp, non-accessibles and useful references and blogs on JMockit.
+This concludes JMockit Part 2. In the final part of [In the deep trenches with JMockit Part 3](http://eing.github.io/testing/2015/12/30/Unit-Testing-With-JMockit-Part3/), we'll look at MockUp, non-accessibles and useful references and blogs on JMockit.
+
+Here are the links to all three deep trenches on JMockit  -
+
+* [In the deep trenches with JMockit Part 1 - On Mocked and Expectations](/testing/2015/11/18/Unit-Testing-With-JMockit-Part1/)
+* [In the deep trenches with JMockit Part 2 - On Verifications, @Tested, @Injectable and more on @Mocked in depth](/testing/2015/12/15/Unit-Testing-With-JMockit-Part2/)
+* [In the deep trenches with JMockit Part 3 - On Mockups, non-accessibles and references](/testing/2015/12/30/Unit-Testing-With-JMockit-Part3/)

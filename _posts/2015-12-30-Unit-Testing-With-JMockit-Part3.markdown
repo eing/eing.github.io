@@ -60,3 +60,7 @@ Here are some references that I started out with and still find them very useful
 <li><a href="https://blog.42.nl/articles/mockito-powermock-vs-jmockit/">Robert Bor's Blog on comparing Mockito/Powermock/JMockit with coding samples</a></li>
 </ul>
 
+For previous deep trenches with JMockit -
+
+* [In the deep trenches with JMockit Part 1 - On Mocked and Expectations](/testing/2015/11/18/Unit-Testing-With-JMockit-Part1/)
+* [In the deep trenches with JMockit Part 2 - On Verifications, @Tested, @Injectable and more on @Mocked in depth](/testing/2015/12/15/Unit-Testing-With-JMockit-Part2/)

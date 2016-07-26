@@ -85,4 +85,7 @@ When we are unit testing a class, we want it to run reliably, repeatedly and fas
 | | withSubstring(T text) |
 | | withSuffix(T text) |
  
-This concludes JMockit Part 1 and I'll cover more topics in the next 2 parts of this JMockit blog.
+This concludes JMockit Part 1 and I'll cover more topics in the next 2 parts of this JMockit blog -
+
+* [Part 2 - On Verifications, @Tested, @Injectable and more on @Mocked in depth](/testing/2015/12/15/Unit-Testing-With-JMockit-Part2/)
+* [Part 3 - On Mockups, non-accessibles and references](/testing/2015/12/30/Unit-Testing-With-JMockit-Part3/)
