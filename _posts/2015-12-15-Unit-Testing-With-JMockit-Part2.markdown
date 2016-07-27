@@ -113,7 +113,7 @@ This is also another common question. Should I mock a field in class or method l
 | All UserAccount instances in class are mocked | UserAccount mock instance has method level scope |
 | account is automatically created by JMockit and assigned | account is automatically created by JMockit and passed by JUnit/TestNG test runner when calling test method|
 | account can be null | account is <b>never</b> null| 
-| account does <b>not</b> support cascaded static factory methods, e.g. UserAccount.getInstance();| account supports cascaded static factory methods |
+| account supports cascaded static factory methods| account supports cascaded static factory methods, e.g. UserAccount.getInstance() |
 
 <h4>@Mocked(stubOutClassInitialization=[true|false])</h4>
 Part 1 has highlighted that "stubOutClassInitialization" is false by default. Here's an example to demonstrate static fields and static initializer -
