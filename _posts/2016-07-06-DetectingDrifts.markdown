@@ -53,14 +53,9 @@ public class DriftEventListener implements HystrixNetworkAuditorEventListener {
             StackTraceElement[] stack = Thread.currentThread().getStackTrace();
 
             // Filter out the stack trace to specific classes you are interested in
-            ArrayList<String> filteredStack = filterStackTraceArray(stack);
-
             // Obtain unique dependencies from the filtered stack trace 
-            String dependencies = getDependencies(filteredStack);
-
             // Write stack trace to log
-            if (dependencies.length() > 1)
-                logger.info(dependencies);
+            logStackTrace(filterStackTraceArray(stack));
         }
     }
 ```
@@ -69,14 +64,6 @@ public class DriftEventListener implements HystrixNetworkAuditorEventListener {
 Drift detector has to be used widely across different organizations, so it should be flexible enough to support all scrum teams without any code modification. By using Java system properties (by specifying with -D in JVM command line), each scrum team can customize these optional parameters according to their needs.
 
 ```
-    // Property to configure log filename
-    public static final String PROPERTY_LOGFILE_NAME = "drift.file";
-    // Default name of log file i.e. dependencies.log
-    public static final String DEFAULT_LOGFILE_NAME = "dependencies.log";
-
-    // Log directory to place dependencies.log
-    public static final String PROPERTY_LOG_DIR_PATH = "drift.logdir";
-
     // Dependencies to be identified. Default is "com.yourcompany".
     public static final String PROPERTY_STACKTRACE_CLASSNAME = "drift.class";
     public static final String DEFAULT_STACKTRACE_CLASSNAME = "com.yourcompany";
@@ -92,8 +79,8 @@ Drift detector has to be used widely across different organizations, so it shoul
     public static final String PROPERTY_AUDITOR_LOG_ENABLED = "drift.log.enabled";
 ```
 
-<h3>Create log file</h3>
-Here's a snippet from logback.xml. The idea is that the logger context should have properties "drift.logdir" and "drift.file" in order to create this log file.
+<h3>Create separate log file</h3>
+To create a separate log file, you can add this snippet into your logback.xml for your project. Here's a sample snippet from logback.xml, and use *-Ddrift.logdir="..."* and *-Ddrift.file="..."* to specify the log file location.
 
 ```
     <appender name="DEPENDENCIES-FILE" class="ch.qos.logback.core.FileAppender">
@@ -105,7 +92,8 @@ Here's a snippet from logback.xml. The idea is that the logger context should ha
     </appender>
 ```
 
-Here's how the listener initialized the logger using JoranConfigurator -
+<!--
+Here's how you can initialized the logger using JoranConfigurator -
 
 ```
         LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
@@ -113,12 +101,12 @@ Here's how the listener initialized the logger using JoranConfigurator -
         jc.setContext(context);
         context.reset();
         // Override default configuration and inject logfile name
-        context.putProperty(Constant.PROPERTY_LOGFILE_NAME, logFilename);
-        context.putProperty(Constant.PROPERTY_LOG_DIR_PATH, logDir);
+        context.putProperty("drift.logfile", logFilename);
+        context.putProperty("drift.logdir, logDir);
         try (InputStream resourceStream =
-                    DriftEventListener.class.getResourceAsStream(Constant.DEFAULT_LOGBACK_CONFIG_FILENAME)) {
+                    DriftEventListener.class.getResourceAsStream("dependencies.log")) {
             jc.doConfigure(resourceStream);
-            logger = context.getLogger(Constant.LOGGER_NAME);
+            logger = context.getLogger("DEPENDENCIES-FILE");
             resourceStream.close();
         } catch (JoranException je) {
             je.printStackTrace();
@@ -126,7 +114,7 @@ Here's how the listener initialized the logger using JoranConfigurator -
             ioe.printStackTrace();
         }
 ```
-
+-->
 
 <h3>Create unit tests</h3>
 Writing unit tests was a tad challenging as I'm extending from a class with private and static methods. I used JMockit to achieve over 80% code coverage and has so far not a single defect. Here's one JMockit test method -
@@ -162,17 +150,11 @@ To build the Java Agent, you'll need to use gradle or maven to package all the d
                     </execution>
                 </executions>
                 <configuration>
+                    <shadedArtifactAttached>true</shadedArtifactAttached>
+                    <shadedClassifierName>jar-with-dependencies</shadedClassifierName>
                     <artifactSet>
                         <includes>
-                            <include>ch.qos.logback:*</include>
-                            <include>io.reactivex:*</include>
                             <include>com.netflix.hystrix:*</include>
-                            <include>com.netflix.archaius:archaius-core</include>
-                            <include>com.netflix.rxjava:*</include>
-                            <include>org.slf4j:slf4j-api</include>
-                            <include>commons-logging:*</include>
-                            <include>commons-lang:*</include>
-                            <include>commons-configuration:*</include>
                         </includes>
                     </artifactSet>
                     <!-- Filename produced will be driftdetector.jar to be consistent with
@@ -184,5 +166,7 @@ To build the Java Agent, you'll need to use gradle or maven to package all the d
 
 <h3>Run it!</h3>
 You should be able to run the agent by appending "-javaagent:${path}/driftdetector.jar" to JVM command-line. You'll have to exercise the application code (by running tests) so that dependencies will be captured.
+
+To make DriftDetector run as part of your CI pipeline, you'll need to update server startup scripts (e.g. tomcat.start) to include the additional JVM configuration as well as deployment scripts (e.g. Chef) to download the drift detector jar to your build environment.
 
 Please leave any feedback and comments. Hope this helps!
