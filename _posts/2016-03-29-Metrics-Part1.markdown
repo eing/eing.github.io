@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Using data to drive change in behavior - Part 1"
-date:   2016-03-29 07:43:59
+title: "Using Data to drive change in behavior - Part 1"
+date: 2016-03-29 07:43:59
 author: Eing Ong
 categories: Metrics
 tags: Sonar
@@ -65,4 +65,4 @@ Some good resources to read more on
 3. [Sonar technical debt calculation](http://www.sonarqube.org/evaluate-your-technical-debt-with-sonar/)
 
 <h2>Next</h2>
-In the second part of this blog, I'll be looking for data to better understand engineers behavior.
+In the [second part of this blog](/metrics/2016/04/07/Metrics-Part2/), I'll be looking for data to better understand engineers behavior.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Data to understand behavior - Part 2"
-date:   2016-04-07 07:43:59
+title: "Using Data to understand behavior - Part 2"
+date: 2016-04-07 07:43:59
 author: Eing Ong
 categories: Metrics
 tags: Perforce
