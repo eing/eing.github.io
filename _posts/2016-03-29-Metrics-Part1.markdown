@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Metrics to drive change in behavior - Part 1"
+title:  "Using data to drive change in behavior - Part 1"
 date:   2016-03-29 07:43:59
 author: Eing Ong
 categories: Metrics
 tags: Sonar
 ---
-I'll talk about just two metrics in this two part blog. I had to obtain different metrics for a Quality 6 Pager I'm working on, a narrative on our current state of quality, and our target state in the organization. This concept came from [Amazon](https://www.linkedin.com/pulse/beauty-amazons-6-pager-brad-porter) and you can easily find more information on it.
+I'll talk about just two pieces of data that can help in decision making in this two part blog. I had to obtain different data for a Quality 6 Pager I'm working on, a narrative on our current state of quality, and our target state in the organization. This concept came from [Amazon](https://www.linkedin.com/pulse/beauty-amazons-6-pager-brad-porter) and you can easily find more information on it.
 
 The first is technical debt of a large code base (aka monolith). Many of the Sonar reports we have are based on individual component and it makes sense as such reports take time to generate. However, a Sonar report on the entire monolith has not been done and I had to go through some hoops to get the data.
 
@@ -52,7 +52,7 @@ As expected, this failed after some time with out of memory error.
 Caused by: java.util.concurrent.ExecutionException: java.lang.OutOfMemoryError: Java heap space
 ~~~
 
-After some research, I added this into sonar-project.properties, and managed to obtain the metrics I was looking for - technical debt (number of days to fix) & number of critical issues, see [sample here](http://docs.sonarqube.org/display/SONAR/Technical+Debt) from Sonar.
+After some research, I added this into sonar-project.properties, and managed to obtain the data I was looking for - technical debt (number of days to fix) & number of critical issues, see [sample here](http://docs.sonarqube.org/display/SONAR/Technical+Debt) from Sonar.
 
 ~~~text
 export SONAR_RUNNER_OPTS="-Xmx1G -Xms1024m -XX:MaxPermSize=1024m -XX:-UseGCOverheadLimit"
@@ -65,4 +65,4 @@ Some good resources to read more on
 3. [Sonar technical debt calculation](http://www.sonarqube.org/evaluate-your-technical-debt-with-sonar/)
 
 <h2>Next</h2>
-In the second part of this metrics blog, I'll be looking for data to better understand engineers behavior.
+In the second part of this blog, I'll be looking for data to better understand engineers behavior.
