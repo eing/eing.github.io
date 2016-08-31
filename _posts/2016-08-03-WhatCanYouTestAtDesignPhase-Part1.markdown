@@ -8,7 +8,7 @@ tags: shift-left
 ---
 It is an established best practice to "Test early and often" and shift left testing such as validating requirements at the beginning of software development. Since requirements testing is pertaining to the knowledge of the domain, my focus on this blog will be in the **design phase**. Testability is becoming widely adopted and build testability into the product is a best practice. One good example is [Airlock](https://code.facebook.com/posts/520580318041111/airlock-facebook-s-mobile-a-b-testing-framework/) which was created by Facebook to enable them to measure data and execute A/B testing.
 
-I'd like to take this further to widen the scope to **usability, payload, latency, availability, versioning, security, tooling and data**.
+I'd like to take this further to widen the scope to include **usability, payload, latency, availability, versioning, security, tooling and data**.
 
 We will exercise the architecture design by assessing the risks in these areas, in additon to validating testability. The goals and outcome of this assessment are
 

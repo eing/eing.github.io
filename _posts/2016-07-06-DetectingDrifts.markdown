@@ -64,19 +64,36 @@ public class DriftEventListener implements HystrixNetworkAuditorEventListener {
 Drift detector has to be used widely across different organizations, so it should be flexible enough to support all scrum teams without any code modification. By using Java system properties (by specifying with -D in JVM command line), each scrum team can customize these optional parameters according to their needs.
 
 ```
-    // Dependencies to be identified. Default is "com.yourcompany".
-    public static final String PROPERTY_STACKTRACE_CLASSNAME = "drift.class";
-    public static final String DEFAULT_STACKTRACE_CLASSNAME = "com.yourcompany";
+public enum PropertyConstant {
 
-    // Number of lines to print from the bottom of the stack trace. Default is -1 i.e. all lines.
-    public static final String PROPERTY_DRIFT_LINES_COUNT = "drift.lines";
-    public static final int DEFAULT_DRIFT_LINES_COUNT = -1;
+        // Dependencies to be identified. Default is "com.yourcompany".
+        STACKTRACE_CLASSNAME ("drift.class", "com.yourcompany"),
 
-    // By default, all stack trace logged are unique. To disable (i.e. do not check for duplicates), set this flag to false.
-    public static final String PROPERTY_REMOVE_DUPLICATES = "drift.remove.duplicates";
+        // Number of lines to print from the bottom of the stack trace.
+        DRIFT_LINES_COUNT("drift.lines", "-1"),
 
-    // By default, dependencies are logged. To disable, set this flag to false.
-    public static final String PROPERTY_AUDITOR_LOG_ENABLED = "drift.log.enabled";
+        // By default, all stack trace logged are unique.
+        REMOVE_DUPLICATES("drift.remove.duplicates", "true"),
+
+        // By default, dependencies are logged.
+        AUDITOR_LOG_ENABLED("drift.log.enabled", "true");
+
+        private final String propertyName;
+        private final String defaultValue;
+
+        PropertyConstant(String propertyName, String defaultValue) {
+            this.propertyName = propertyName;
+            this.defaultValue = defaultValue;
+        }
+
+        public String getPropertyName() {
+            return this.propertyName;
+        }
+
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+}
 ```
 
 <h3>Create separate log file</h3>
@@ -92,8 +109,7 @@ To create a separate log file, you can add this snippet into your logback.xml fo
     </appender>
 ```
 
-<!--
-Here's how you can initialized the logger using JoranConfigurator -
+In a few cases, we have large monolithic code base with a single jar and you'd rather not modify the log file configuration, here's how you can initialize the logger using JoranConfigurator -
 
 ```
         LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
@@ -114,7 +130,6 @@ Here's how you can initialized the logger using JoranConfigurator -
             ioe.printStackTrace();
         }
 ```
--->
 
 <h3>Create unit tests</h3>
 Writing unit tests was a tad challenging as I'm extending from a class with private and static methods. I used JMockit to achieve over 80% code coverage and has so far not a single defect. Here's one JMockit test method -
