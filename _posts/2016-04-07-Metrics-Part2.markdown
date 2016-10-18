@@ -83,6 +83,7 @@ Mon Mar  7 15:08:50 PST 2011
 Last but not least, this week I had the opportunity to meet with Marty, Drew & Bill from [AKF partners](http://akfpartners.com). Their [blogs](http://akfpartners.com/techblog/all_posts/) and [books](http://www.amazon.com/Martin-L.-Abbott/e/B002KYQTZ4/ref=sr_ntt_srch_lnk_1?qid=1459967398&sr=1-1) are highly regarded in the industry. They have a few blogs on using data as metrics as well -
 
 [Selecting metrics for your Agile teams](http://akfpartners.com/techblog/2015/01/19/selecting-metrics-agile-teams/)
+
 [Engineering metrics](http://akfpartners.com/techblog/2012/11/01/engineering-metrics/)
 
 Finally, I'll leave you with the good ol' quote <i>"You can't improve what you don't measure"</i>, use the right data to drive change and behavior to achieve the outcome.

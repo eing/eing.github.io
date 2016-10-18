@@ -94,4 +94,4 @@ The table below helps to organize and use data to quantify answers to the questi
 | N + 1 | | | | |
 | N (Rollback) | | | | |
 
-This concludes the first part of this Software Design Testing blog. I'll elaborate on security, tooling and data which are important areas that I can easily write a few blogs on. To keep it simple, here's [Part 2](/testing/2016/08/06/WhatCanYouTestAtDesignPhase-Part2/).
+This concludes the first part of this Software Design Testing blog. I'll elaborate on security, and tooling which are important areas as well. Here's [Part 2](/testing/2016/08/06/WhatCanYouTestAtDesignPhase-Part2/).
