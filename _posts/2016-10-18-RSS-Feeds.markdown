@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Keeping up with the Joneses"
+date:   2016-10-18 18:43:59
+author: Eing Ong
+categories: Technology
+---
+To keep up to date with technology and the industry, I follow a set of RSS feeds listed below. I'd like to hear your favorite tech feeds that you subscribe to or perhaps your favorite presentations/slideshares etc.
+
+**Agile**
+
+ * Mike Cohn - [http://www.mountaingoatsoftware.com/blog](http://www.mountaingoatsoftware.com/blog)
+ * Continuous Delivery - [http://continuous-delivery-and-more.blogspot.com](http://continuous-delivery-and-more.blogspot.com)
+ * Agile Testing - [http://agiletesting.blogspot.com](http://agiletesting.blogspot.com)
+
+**AWS**
+
+ * Architecture - [https://www.awsarchitectureblog.com](https://www.awsarchitectureblog.com)
+ * Big Data - [https://aws.amazon.com/blogs/big-data/](https://aws.amazon.com/blogs/big-data/)
+ * Developer - [https://aws.amazon.com/blogs/developer/](https://aws.amazon.com/blogs/developer/)
+ * Security - [https://aws.amazon.com/blogs/security/](https://aws.amazon.com/blogs/security/)
+
+**Tech Companies**
+
+ * LinkedIn - [https://engineering.linkedin.com](https://engineering.linkedin.com)
+ * Quora  - [https://engineering.quora.com](https://engineering.quora.com)
+ * Netflix - [http://techblog.netflix.com](http://techblog.netflix.com)
+ * Facebook - [https://code.facebook.com](https://code.facebook.com)
+ * High Scalability - [http://feeds.feedburner.com/HighScalability](http://feeds.feedburner.com/HighScalability)
+ * Google 
+   * Engineering - [http://google-engtools.blogspot.com](http://google-engtools.blogspot.com)
+   * Testing Blog - [https://testing.googleblog.com](https://testing.googleblog.com)
+
+**Thought leaders** 
+
+ * AKF Partners - [http://akfpartners.com/techblog](http://akfpartners.com/techblog)
+ * James Bach - [http://www.satisfice.com/blog](http://www.satisfice.com/blog)
